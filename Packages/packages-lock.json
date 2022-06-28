@@ -7,6 +7,21 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.grashaar.unity-objectpooling": {
+      "version": "file:C:/Users/ginku/Downloads/Unity.ObjectPooling-1.5.2-preview.1/Unity.ObjectPooling-1.5.2-preview.1",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.laicasaane.unity-supplements": "2.6.0"
+      }
+    },
+    "com.laicasaane.unity-supplements": {
+      "version": "2.6.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "com.unity.2d.animation": {
       "version": "7.0.5",
       "depth": 1,

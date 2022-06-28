@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "com.grashaar.unity-objectpooling": "file:C:/Users/ginku/Downloads/Unity.ObjectPooling-1.5.2-preview.1/Unity.ObjectPooling-1.5.2-preview.1",
+    "com.laicasaane.unity-supplements": "2.6.0",
     "com.unity.collab-proxy": "1.15.17",
     "com.unity.feature.2d": "1.0.0",
     "com.unity.feature.characters-animation": "1.0.0",
@@ -44,5 +46,15 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "scopedRegistries": [
+    {
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.laicasaane.unity-supplements",
+        "com.openupm"
+      ]
+    }
+  ]
 }
