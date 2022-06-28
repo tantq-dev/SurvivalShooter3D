@@ -181,6 +181,54 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 9533672, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 3}
+--- !u!1 &50298242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 50298244}
+  - component: {fileID: 50298243}
+  m_Layer: 0
+  m_Name: HellephantCombie
+  m_TagString: Untagged
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &50298243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50298242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cecfaee7d7600148af23e02819d8710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 1038861684}
+  timeToSpawn: 3
+  spawnPoint: {fileID: 50298244}
+  typeOfZom: 0
+--- !u!4 &50298244
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50298242}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.9, y: 0.58, z: 11.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &349322598
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4561646482112880, guid: 5c4d84eac7544b848bd840390376bad1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4.29
       objectReference: {fileID: 0}
     - target: {fileID: 4561646482112880, guid: 5c4d84eac7544b848bd840390376bad1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -345,7 +393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4561646482112880, guid: 5c4d84eac7544b848bd840390376bad1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3.34
       objectReference: {fileID: 0}
     - target: {fileID: 4561646482112880, guid: 5c4d84eac7544b848bd840390376bad1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -423,7 +471,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &736231510
 MonoBehaviour:
@@ -537,7 +585,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1038861685}
+      - m_Target: {fileID: 879090738}
         m_TargetAssemblyTypeName: EnemyPoolerManager, Assembly-CSharp
         m_MethodName: ReturnPress
         m_Mode: 1
@@ -598,6 +646,7 @@ GameObject:
   - component: {fileID: 805245831}
   - component: {fileID: 805245830}
   - component: {fileID: 805245829}
+  - component: {fileID: 805245832}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -636,11 +685,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -663,14 +712,28 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805245828}
-  m_LocalRotation: {x: 0.5158238, y: -0, z: -0, w: 0.85669476}
-  m_LocalPosition: {x: 0, y: 28.7, z: -9.1}
+  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 62.105, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
+--- !u!114 &805245832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805245828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71277fa43f0046f438b604f6bf6fcc49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1911665415}
+  cameraOffset: {x: 0, y: 10, z: -5}
 --- !u!1 &879090736
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,10 +743,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 879090737}
+  - component: {fileID: 879090738}
   m_Layer: 0
-  m_Name: ZomCombie
+  m_Name: ZombunnyCombie
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -695,13 +759,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879090736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -21.9, y: 0, z: 2.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &879090738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879090736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cecfaee7d7600148af23e02819d8710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 1038861684}
+  timeToSpawn: 3
+  spawnPoint: {fileID: 879090737}
+  typeOfZom: 2
 --- !u!1 &1030022624
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,9 +885,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1038861683}
-  - component: {fileID: 1038861682}
   - component: {fileID: 1038861684}
-  - component: {fileID: 1038861685}
+  - component: {fileID: 1038861682}
   m_Layer: 0
   m_Name: EnemyPooler
   m_TagString: Untagged
@@ -828,10 +907,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolRoot: {fileID: 1038861683}
-  silent: 0
+  silent: 1
   items:
   - key: bunny
     Object: {fileID: 1316870115736770, guid: 99a7453c1f39ff241930d5136db32aea, type: 3}
+    prepoolAmount: 10
+  - key: ephant
+    Object: {fileID: 153412, guid: 548c56f4bcf4db24b8aa057e9846a005, type: 3}
+    prepoolAmount: 10
+  - key: bear
+    Object: {fileID: 1640274901286092, guid: c077a7cccdc740c4582b9ac366679692, type: 3}
     prepoolAmount: 10
   resetParent: 1
 --- !u!4 &1038861683
@@ -842,7 +927,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038861681}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.52, z: 0}
+  m_LocalPosition: {x: -12.02, y: 1.52, z: 7.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -862,22 +947,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pooler: {fileID: 0}
---- !u!114 &1038861685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1038861681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cecfaee7d7600148af23e02819d8710, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawner: {fileID: 1038861684}
-  timeToSpawn: 3
-  zomCombie: {fileID: 879090737}
-  typeOfZom: 2
 --- !u!1 &1078377467
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,7 +1031,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1038861685}
+      - m_Target: {fileID: 879090738}
         m_TargetAssemblyTypeName: EnemyPoolerManager, Assembly-CSharp
         m_MethodName: SpawnPress
         m_Mode: 1
@@ -1107,13 +1176,66 @@ RectTransform:
   - {fileID: 1078377468}
   - {fileID: 789137478}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1369796500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1369796502}
+  - component: {fileID: 1369796501}
+  m_Layer: 0
+  m_Name: ZombearCombie
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1369796501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369796500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cecfaee7d7600148af23e02819d8710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 1038861684}
+  timeToSpawn: 3
+  spawnPoint: {fileID: 1369796502}
+  typeOfZom: 1
+--- !u!4 &1369796502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369796500}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.8, y: 0, z: 15.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1911665415 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4561646482112880, guid: 5c4d84eac7544b848bd840390376bad1, type: 3}
+  m_PrefabInstance: {fileID: 502499812}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2119280352
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,8 +9,8 @@ public class EnemyPoolerManager : MonoBehaviour
 {
     [SerializeField] private GameObjectSpawner spawner;
     public float timeToSpawn;
-    public Transform zomCombie;
-
+    private float _elapsedTime =0f;
+    public Transform spawnPoint;
     public enum TypeOfZom
     {
         ephant,
@@ -23,24 +23,14 @@ public class EnemyPoolerManager : MonoBehaviour
     {
         spawner.Initialize();
     }
-
-    IEnumerator spawnEnemy(float time)
-    {
-        
-        yield return new WaitForSeconds(time);
-        
-        
-    }
     void Update()
     {
-        // if (zomCombie.childCount > 9)
-        // {  
-        //     spawner.Return(zomCombie.transform.GetChild(1).gameObject);
-        // }
-        // StartCoroutine(spawnEnemy(3f));
-        // var go = spawner.Get(typeOfZom.ToString(), Vector3.zero, quaternion.identity);
-        // go.SetActive(true);
-        // go.transform.parent = zomCombie;
+        _elapsedTime += Time.deltaTime;
+        if (_elapsedTime > timeToSpawn)
+        {
+            SpawnEnemy();
+            _elapsedTime = 0f;
+        }
     }
 
     public void SpawnPress()
@@ -49,15 +39,17 @@ public class EnemyPoolerManager : MonoBehaviour
         {
             return;
         }
+
+    }
+    private void SpawnEnemy()
+    {
         var go = spawner.Get(typeOfZom.ToString(), Vector3.zero, quaternion.identity);
-        go.SetActive(true);
-        go.transform.SetParent(zomCombie);
-        
+        go.transform.position = spawnPoint.transform.position;
+        go.transform.SetParent(this.transform);
     }
 
     public void ReturnPress()
     {
-       
-        spawner.Return(zomCombie.GetChild(0).gameObject);
+        spawner.Return(this.transform.GetChild(0).gameObject);
     }
 }
