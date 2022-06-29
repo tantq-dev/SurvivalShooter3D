@@ -45,11 +45,9 @@ public class EnemyPoolerManager : MonoBehaviour
     {
         var go = spawner.Get(typeOfZom.ToString(), Vector3.zero, quaternion.identity);
         go.transform.position = spawnPoint.transform.position;
+        go.GetComponent<EnemyAbilities>().OriginWhenSpawn();
         go.transform.SetParent(this.transform);
     }
 
-    public void ReturnPress()
-    {
-        spawner.Return(this.transform.GetChild(0).gameObject);
-    }
+   
 }

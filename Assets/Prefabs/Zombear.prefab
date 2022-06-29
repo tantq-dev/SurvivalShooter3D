@@ -155,7 +155,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  playerPosition: {fileID: 0}
+  player: {fileID: 0}
+  AttackRange: 5
+  attackTimeCooldown: 5
+  damage: 1
 --- !u!195 &-1409658721328323970
 NavMeshAgent:
   m_ObjectHideFlags: 0
