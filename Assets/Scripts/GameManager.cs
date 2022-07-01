@@ -15,9 +15,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject ingameUI;
     [SerializeField] private GameObject pauseGameUI;
     [SerializeField] private TextMeshProUGUI enemyCount;
+    private GameObject player;
     
     void Start()
     {
+        player = FindObjectOfType<PlayerMovement>().gameObject;
         EnemyKillCount.Value = 0;
         enemyCount.text = "0";
         gameOverPannel.SetActive(false);
@@ -49,12 +51,14 @@ public class GameManager : MonoBehaviour
 
     public void PauseGamePress()
     {
+        player.SetActive(false);
         pauseGameUI.SetActive(true);
         Time.timeScale = 0;
     }
 
     public void ContinuePress()
     {
+        player.SetActive(true);
         pauseGameUI.SetActive(false);
         Time.timeScale = 1;
     }
