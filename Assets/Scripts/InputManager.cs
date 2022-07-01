@@ -28,16 +28,5 @@ public class InputManager : MonoBehaviour
     {
         _controls.Player.Fire.performed += _ => weapon.Shoot();
     }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void Shoot()
-    {
-        Debug.Log("Shooting");
-    }
+    
 }
