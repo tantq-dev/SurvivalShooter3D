@@ -18,11 +18,26 @@ public class AudioVolume : MonoBehaviour
 
     [SerializeField] private float _multiplier = 30f;
 
+    [SerializeField] private FloatVariable _musicValue;
+    [SerializeField] private FloatVariable _sfxValue;
     private void Awake()
     {
         MusicSlider.onValueChanged.AddListener(HandleMusicSliderValueChange);
         SFXSlider.onValueChanged.AddListener(HandleSfxSliderValueChange);
         
+    }
+
+    private void OnDisable()
+    {
+        _musicValue.Value = MusicSlider.value;
+        _sfxValue.Value = SFXSlider.value;
+        
+    }
+
+    private void OnEnable()
+    {
+        MusicSlider.value = _musicValue.Value;
+        SFXSlider.value = _sfxValue.Value;
     }
 
     private void HandleSfxSliderValueChange(float value)

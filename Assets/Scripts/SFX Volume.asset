@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb7e8086b40356d4b893cf0f883ee00a, type: 3}
-  m_Name: SFXVolume
+  m_Name: SFX Volume
   m_EditorClassIdentifier: 
   Value: 0
